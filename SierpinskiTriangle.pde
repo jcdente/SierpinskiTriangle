@@ -1,11 +1,11 @@
 public void setup()
 {
 	size(800, 800);
-	background(0, 0, 0);
+	frameRate(10);	
 }
 public void draw()
 {
-	
+	background((float)Math.random()*255, (float)Math.random()*255, (float)Math.random()*255);
 	sierpinski(0, 800, 800);
 }
 public void mouseDragged()//optional
@@ -14,7 +14,8 @@ public void mouseDragged()//optional
 }
 public void sierpinski(int x, int y, int len) 
 {
-	fill(255, 255, 255);
+	noStroke();
+	fill((float)Math.random()*255, (float)Math.random()*255, (float)Math.random()*255);
 	if(len >= 20)
 	{
 		sierpinski(x, y, len/2);
